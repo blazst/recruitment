@@ -1,6 +1,8 @@
-import 'picturefill'
-import custom from './modules/custom'
+import "picturefill";
+import custom from "./modules/custom";
 
-window.addEventListener('load', () => {
-    custom()
-})
+custom();
+
+// window.addEventListener("load", () => {
+// 	custom();
+// });

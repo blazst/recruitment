@@ -5,3 +5,72 @@ html
         meta(charset="utf-8")
     body
         block content
+    section.card-form
+        article.card-item(id="cardItem")
+            div.card-item__side.-front
+              div.card-item__focus
+              div.card-item__cover
+                img(id="cardBg" src="../../images/background.jpg" class="card-item__bg")
+              div.card-item__wrapper
+                div.card-item__top
+                  img(id="cardChipImg" src="../../images/chip.png" alt="chip" class="card-item__chip")
+                  div.card-item__type
+                    div.carousel-inner
+                span(for="cardNumber" class="card-item__number" id="cardNumberLabel")
+                div.card-item__content
+                  span(for="cardName" class="card-item__info")
+                    div.card-item__holder Card Holder
+                    div.card-item__name(id="cardNameDisplay") AD SOYAD
+                  span.card-item__date
+                    span(for="cardMonth" class="card-item__dateTitle") Expires
+                    div
+                        span(for="cardMonth" class="card-item__dateItem" id="cardMonthDisplay") MM
+                        | /
+                        span(for="cardYear" class="card-item__dateItem" id="cardYearDisplay") YY
+            div.card-item__side.-back
+              div.card-item__cover
+                img(id="cardBgBack" src="../../images/background.jpg" class="card-item__bg")
+              div.card-item__band
+              div.card-item__cvv
+                div.card-item__cvvTitle CVV
+                div.card-item__cvvBand(id="cardCvvDisplay")
+                div.card-item__type
+                    div.carousel-inner
+        form.card-form__form
+          p.card-input
+            label(for="cardNumberInput" class="card-input__label") Card Number
+            input(type="text" id="cardNumberInput" class="card-input__input" autocomplete="off")
+          p.card-input
+            label(for="cardNameInput" class="card-input__label") Card Holders
+            input(type="text" id="cardNameInput" class="card-input__input" maxlength=25)
+          div.card-form__row
+            div.card-form__group
+                label(for="cardMonthInput" class="card-input__label") Expiration Date
+                select(class="card-input__input card-input__input-select" id="cardMonthInput")
+                  option(value="" disabled selected) Month
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06") 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                  option(value="11") 11
+                  option(value="12") 12
+                select(class="card-input__input card-input__input-select" id="cardYearInput")
+                  option(value="" disabled selected) Year
+                  option(value="2024") 2024
+                  option(value="2025") 2025
+                  option(value="2026") 2026
+                  option(value="2027") 2027
+                  option(value="2028") 2028
+                  option(value="2029") 2029
+                  option(value="2030") 2030
+            div.card-form__col.-cvv
+              div.card-input
+                label(for="cardCvv" class="card-input__label") CVV
+                input(type="text" class="card-input__input" id="cardCvvInput" maxlength="4" autocomplete="off")
+          button.card-form__button(type="button" id="submitButton") Submit
