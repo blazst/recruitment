@@ -178,7 +178,7 @@ export default function custom() {
 
 				setTimeout(() => {
 					cardYearDisplay.classList.remove("card-date-enter");
-				}, 300); // Duration should match your CSS animation duration
+				}, 300);
 			}
 		};
 
